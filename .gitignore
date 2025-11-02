@@ -1,0 +1,31 @@
+﻿# Python
+backend/venv/
+backend/__pycache__/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Model files (too large for GitHub)
+backend/models/
+*.gguf
+*.bin
+*.safetensors
+
+# Node
+node_modules/
+.npm
+.env
+.env.local
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo

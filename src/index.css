@@ -1,0 +1,697 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 176px;
+  background-color: #eff6ff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 12px;
+}
+
+.logo-container {
+  margin-bottom: 40px;
+  padding: 0 12px;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.logo-icon {
+  position: relative;
+}
+
+.logo-box {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 2px solid #312e81;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-letter {
+  color: #312e81;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.logo-underline {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #312e81;
+}
+
+.logo-text {
+  margin-left: 4px;
+  font-size: 12px;
+  font-weight: 300;
+  color: #312e81;
+  letter-spacing: 0.05em;
+}
+
+/* Navigation */
+.nav-menu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+  color: #374151;
+  font-size: 14px;
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-button.active {
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.nav-icon {
+  width: 18px;
+  height: 18px;
+  color: #4b5563;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #f9fafb;
+  overflow-y: auto;
+}
+
+.content-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Header Card */
+.header-card {
+  background-color: white;
+  border-radius: 24px;
+  border: 1px solid #e5e7eb;
+  padding: 64px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 60px;
+  font-weight: bold;
+  color: #312e81;
+  margin-bottom: 12px;
+  font-family: Georgia, serif;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #312e81;
+}
+
+/* Mood Selector */
+.mood-selector {
+  background-color: rgba(233, 213, 255, 0.6);
+  border-radius: 16px;
+  padding: 20px 32px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mood-question {
+  font-size: 16px;
+  color: #1f2937;
+}
+
+.mood-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.mood-button {
+  width: 48px;
+  height: 48px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.mood-button:hover {
+  transform: scale(1.1);
+}
+
+/* Feature Cards Grid */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.feature-card {
+  background-color: rgba(239, 246, 255, 0.7);
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.feature-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon-wrapper {
+  width: 112px;
+  height: 112px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.feature-description {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+/* Affirmation Card */
+.affirmation-card {
+  background: linear-gradient(to right, #e9d5ff, #bfdbfe, #e9d5ff);
+  border-radius: 16px;
+  padding: 32px;
+  text-align: center;
+}
+
+.affirmation-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.affirmation-sparkle {
+  color: #c084fc;
+  font-size: 24px;
+}
+
+.affirmation-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #7e22ce;
+  font-family: Georgia, serif;
+}
+
+.affirmation-text {
+  font-size: 16px;
+  font-style: italic;
+  color: #581c87;
+  line-height: 1.6;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+/* Chat Page */
+.chat-container {
+  max-width: 768px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  background-color: white;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+}
+
+.chat-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #312e81;
+  margin-bottom: 4px;
+}
+
+.chat-subtitle {
+  color: #4b5563;
+}
+
+.chat-messages {
+  flex: 1;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  overflow-y: auto;
+  border-left: 1px solid #e5e7eb;
+  border-right: 1px solid #e5e7eb;
+}
+
+.message-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.message {
+  display: flex;
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message.bot {
+  justify-content: flex-start;
+}
+
+.message-bubble {
+  max-width: 384px;
+  padding: 12px 16px;
+  border-radius: 16px;
+}
+
+.message-bubble.user {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.message-bubble.bot {
+  background-color: #f3e8ff;
+  color: #1f2937;
+}
+
+.chat-input-container {
+  background-color: white;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+}
+
+.chat-input-wrapper {
+  display: flex;
+  gap: 12px;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e9d5ff;
+  border-radius: 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+.chat-input:focus {
+  border-color: #c084fc;
+}
+
+.send-button {
+  padding: 12px 24px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.send-button:hover {
+  background-color: #4338ca;
+}
+
+/* Mind Games Page */
+.page-header {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 32px;
+  margin-bottom: 32px;
+  border: 1px solid #e5e7eb;
+}
+
+.page-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #312e81;
+  margin-bottom: 8px;
+}
+
+.page-description {
+  font-size: 20px;
+  color: #4b5563;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.game-card {
+  border-radius: 16px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid #e5e7eb;
+}
+
+.game-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.game-card.pink {
+  background: linear-gradient(to bottom right, #fce7f3, #fbcfe8);
+}
+
+.game-card.blue {
+  background: linear-gradient(to bottom right, #dbeafe, #bfdbfe);
+}
+
+.game-card.green {
+  background: linear-gradient(to bottom right, #dcfce7, #bbf7d0);
+}
+
+.game-card.yellow {
+  background: linear-gradient(to bottom right, #fef9c3, #fef08a);
+}
+
+.game-card.purple {
+  background: linear-gradient(to bottom right, #f3e8ff, #e9d5ff);
+}
+
+.game-card.indigo {
+  background: linear-gradient(to bottom right, #e0e7ff, #c7d2fe);
+}
+
+.game-icon-container {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  padding: 24px;
+  height: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.game-icon {
+  width: 48px;
+  height: 48px;
+  color: #7c3aed;
+}
+
+.game-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.game-desc {
+  font-size: 14px;
+  color: #374151;
+}
+
+/* Mood Tracker Page */
+.mood-tracker-container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.mood-selection-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 32px;
+  margin-bottom: 24px;
+  border: 1px solid #e5e7eb;
+}
+
+.mood-selection-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 24px;
+}
+
+.mood-options {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.mood-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  background: none;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.mood-option:hover {
+  background-color: #faf5ff;
+}
+
+.mood-emoji {
+  font-size: 60px;
+}
+
+.mood-label {
+  font-size: 18px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.mood-history-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 32px;
+  border: 1px solid #e5e7eb;
+}
+
+.mood-history-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 16px;
+}
+
+.mood-history-empty {
+  color: #4b5563;
+  text-align: center;
+  padding: 32px 0;
+}
+
+.mood-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mood-history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: #faf5ff;
+  border-radius: 12px;
+}
+
+.mood-history-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mood-history-emoji {
+  font-size: 30px;
+}
+
+.mood-history-mood {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.mood-history-time {
+  color: #4b5563;
+  font-size: 14px;
+}
+
+/* Settings Page */
+.settings-container {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.settings-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 32px;
+  border: 1px solid #e5e7eb;
+}
+
+.settings-section {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 24px;
+}
+
+.settings-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.settings-section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.settings-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.settings-checkbox {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.settings-select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e9d5ff;
+  border-radius: 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+.settings-link {
+  color: #4f46e5;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.settings-link:hover {
+  text-decoration: underline;
+}
+
+.settings-info {
+  color: #4b5563;
+  margin-top: 4px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .feature-grid,
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80px;
+  }
+  
+  .logo-text,
+  .nav-button span {
+    display: none;
+  }
+  
+  .feature-grid,
+  .games-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Remove underline from all links */
+a {
+  text-decoration: none;
+  color: inherit; /* keeps your text color */
+}
+
+/* Optional: keep hover color change if you want */
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
