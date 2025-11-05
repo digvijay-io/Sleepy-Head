@@ -148,7 +148,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - GitHub: [@digvijay-io](https://github.com/digvijay-io)
 
 **Maruf**
-- GitHub: [@maruf](https://github.com/maruf)
+- GitHub: [@MaruffCodes](https://github.com/MaruffCodes)
 
 **Vishnupriya**
 - GitHub: [@vishnupriya](https://github.com/vishnupriya)
