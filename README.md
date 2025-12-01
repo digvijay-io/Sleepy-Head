@@ -151,7 +151,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - GitHub: [@MaruffCodes](https://github.com/MaruffCodes)
 
 **Vishnupriya**
-- GitHub: [@vishnupriya](https://github.com/vishnupriya)
+- GitHub: [@blue-codies](https://github.com/blue-codies)
 
 ## 🙏 Acknowledgments
 
